@@ -43,3 +43,41 @@ VALUES
 ('Cynthia', 'Gonzalez', 'cynthia@crc-software.com', '$2y$10$qjyE5x/ryTja7pdZnImCs.bxEzt5wBr07eBLRVfX80lDTTLak9PjW', 1, NOW(),  NOW());
 
 INSERT INTO app_info(title) VALUES("app-bike");
+
+CREATE TABLE app_users (
+    app_user_id int (3) NOT NULL AUTO_INCREMENT,
+    type int(1) NOT NULL,
+    email varchar (255) NOT NULL,
+    password varchar (255) NOT NULL,
+    date_created datetime NOT NULL,
+    last_access datetime NOT NULL, 
+    PRIMARY KEY (app_user_id)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+CREATE TABLE  company_detail (
+    company_id int(3) NOT NULL AUTO_INCREMENT,
+    app_user_id int(1) NOT NULL,
+    category_id int(1) NOT NULL,
+    name varchar (255) NOT NULL,
+    slogan varchar (512),
+    logo varchar (255),
+    small_description varchar (256),
+    full_description text,
+    adress varchar (512),
+    latitude varchar (128) NOT NULL,
+    longitude varchar (128) NOT NULL,
+    open_hour time NOT NULL,
+    closed_hour time NOT NULL,
+    status int(1) NOT NULL DEFAULT 0,
+    PRIMARY KEY (company_id)
+
+)ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+CREATE TABLE restaurant_categories (
+    category_id int(3) NOT NULL, AUTO_INCREMENT,
+    category_name varchar (256) NOT NULL,
+    small_description varchar (512),
+    PRIMARY KEY (category_id)
+    
+)ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+    

@@ -28,7 +28,7 @@ class SessionValidation extends queriesLogin {
 		session_start();
 		$_SESSION["id_user"]      = $user_data["user_id"];
 		$_SESSION["type_user"]    = $user_data["type_user"];
-		$_SESSION["name"]         = $user_data["FirstName"].' '.user_data['LastName'];
+		$_SESSION["name"]         = $user_data["FirstName"].' '.$user_data['LastName'];
 		header("Location: /");
 		exit();
 	}

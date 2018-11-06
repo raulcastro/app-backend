@@ -562,6 +562,48 @@ class Layout_View
         ob_end_clean();
         return $sideBar;
     }
+    
+     public function getGridHead()
+    {
+        ob_start();
+        ?>
+        <link href="/plugins/jquery.uploadfile/uploadfile.css" rel="stylesheet">
+        <?php
+        $head = ob_get_contents();
+        ob_end_clean();
+        return $head;
+    }
+    
+    public function getGridScripts()
+    {
+        ob_start();
+        ?>
+        <script src="/plugins/jquery.uploadfile/jquery.uploadfile.min.js"></script>
+        <script src="/dist/js/grid.js"></script>
+
+        <?php
+        $scripts = ob_get_contents();
+        ob_end_clean();
+        return $scripts;
+    }
+   	
+   	/**
+   	 * getGridContent
+   	 * it returns the structure of the grid
+   	 * @return string
+   	 */
+   	public function getDashboardContent()
+   	{
+        ob_start();
+        ?>
+        <section class='new-main-content cf' id='x-protips-grid'>
+                <h1>Dashboard</h1>
+        </section>
+    	<?php
+    	$dashboard = ob_get_contents();
+    	ob_end_clean();
+    	return $dashboard;
+    }
    	
     public function getGridHead()
     {
