@@ -21,3 +21,4 @@ CREATE TABLE `app_info` (
   `location` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO app_info(title) VALUES("app-bike");
