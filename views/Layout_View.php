@@ -74,8 +74,8 @@ class Layout_View
                     echo self::getBlogHead();
                     break;
 
-                case 'add-blog':
-                    echo self::getAddBlogHead();
+                case 'add-company':
+                    echo self::getAddCompanyHead();
                     break;
 
                 case 'dashboard':
@@ -130,8 +130,8 @@ class Layout_View
                                     echo self::getBlogContent();
                                     break;
 
-                                case 'add-blog':
-                                    echo self::getAddBlogContent();
+                                case 'add-company':
+                                    echo self::getAddCompanyContent();
                                     break;
 
                                 case 'edit-blog':
@@ -199,8 +199,8 @@ class Layout_View
                         echo self::getBlogScripts();
                         break;
 
-                    case 'add-blog':
-                        echo self::getAddBlogScripts();
+                    case 'add-company':
+                        echo self::getAddCompanyScripts();
                         break;
 
                     case 'dashboard':
@@ -534,21 +534,20 @@ class Layout_View
                     <li class="treeview active">
                         <a href="#">
                             <i class="fa fa-pencil-square"></i>
-                            <span>Gallery</span>
+                            <span>Companies</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="/add-entry-blog/"><i class="fa fa-plus-square"></i>Add Gallery</a></li>
+                            <li><a href="/add-company/"><i class="fa fa-plus-square"></i>Add company</a></li>
                             <?php
-                            foreach ($this->data['categories'] as $category)
+                            /*foreach ($this->data['categories'] as $category)
                             {
                                 ?>
                             <li><a href="/blog/<?php echo $category['category_id']; ?>/"><i class="fa fa-image"></i><?php echo $category['title']; ?></a></li>
                                 <?php
-                            }
+                            }*/
                             ?>
-                            <li><a href="/featured/"><i class="fa fa-star"></i>Featured</a></li>
-                            <li><a href="/blog/"><i class="fa fa-list"></i>All galleries</a></li>
+                            
                         </ul>
                     </li>
                     <?php } ?>
@@ -1369,7 +1368,7 @@ class Layout_View
         return $content;
     }   
     
-    public function getAddBlogHead()
+    public function getAddCompanyHead()
     {
     	ob_start();
     	?>
@@ -1380,7 +1379,7 @@ class Layout_View
     	return $head;
     }
     
-    public function getAddBlogScripts()
+    public function getAddCompanyScripts()
     {
     	ob_start();
     	?>
@@ -1394,7 +1393,7 @@ class Layout_View
     	return $scripts;
     }
     
-    public function getAddBlogContent()
+    public function getAddCompanyContent()
     {
     	ob_start();
     	?>
@@ -1402,7 +1401,7 @@ class Layout_View
 			<div class="col-md-8 col-center">
 				<div class="box box-primary">
 					<div class="box-header with-border">
-						<h3 class="box-title">Add a new entry blog</h3>
+						<h3 class="box-title">Add a new company</h3>
 					</div>
 					<!-- /.box-header -->
 					<!-- form start -->
@@ -1423,7 +1422,7 @@ class Layout_View
             							foreach ($this->data['categories'] as $category)
             							{
             								?>
-            							<option value="<?php echo $category['category_id']; ?>" <?php if ($category['category_id'] == $this->data['entry']['category_id']){ echo 'selected="selected"';}?>><?php echo $category['title']; ?></option>
+            							<option value="<?php echo $category['category_id']; ?>"><?php echo $category['category_name']; ?></option>
             								<?php
             							}
             							?>

@@ -80,4 +80,7 @@ CREATE TABLE restaurant_categories (
     PRIMARY KEY (category_id)
     
 )ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+INSERT INTO restaurant_categories (category_name, small_description) VALUES ("comida rapida", "fonda de la esquina");
+INSERT INTO restaurant_categories (category_name, small_description) VALUES ("tacos", "todos los tacos de perro de playa");
     

@@ -74,8 +74,8 @@ class generalBackend
                         $data['gallery'] = $this->model->getAllGalleryPhotos();
                     break;
 
-                    case 'add-blog':
-                        $data['categories'] = $this->model->getAllBlogCategories();
+                    case 'add-company':
+                        $data['categories'] = $this->model->getAllRestaurantCategories();
                     break;
 
                     case 'edit-blog':

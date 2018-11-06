@@ -294,6 +294,16 @@ class Layout_Model
             }
             
         }
+    public function getAllRestaurantCategories()
+    {
+        try {
+            $query = "SELECT * FROM restaurant_categories";
+            return $this->db->getArray($query);
+        }
+        catch (Exception $e) {
+            return false;
+        }
+    }
 }
 
 
