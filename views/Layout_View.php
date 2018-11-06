@@ -79,7 +79,7 @@ class Layout_View
                     break;
 
                 case 'dashboard':
-                    echo self::getMainGalleryHead();
+                    echo self::getDashboardHead();
                     break;
 
                 case 'main-gallery':
@@ -123,7 +123,7 @@ class Layout_View
                             <?php 
                             switch ($this->data['section']) {
                                 case 'dashboard':
-                                    echo self::getMainGalleryContent();
+                                    echo self::getDashboardContent();
                                     break;
 
                                 case 'blog':
@@ -204,7 +204,7 @@ class Layout_View
                         break;
 
                     case 'dashboard':
-                        echo self::getMainGalleryScripts();
+                        echo self::getDashboardScripts();
                         break;
 
                     case 'main-gallery':
@@ -563,7 +563,7 @@ class Layout_View
         return $sideBar;
     }
     
-     public function getGridHead()
+     public function getDashboardHead()
     {
         ob_start();
         ?>
@@ -574,7 +574,7 @@ class Layout_View
         return $head;
     }
     
-    public function getGridScripts()
+    public function getDashboardScripts()
     {
         ob_start();
         ?>

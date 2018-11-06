@@ -23,8 +23,8 @@ if (isset($_SESSION["id_user"]))
 	require_once $root.'/backends/admin-backend.php';
 	
 	$data 				= $backend->loadBackend('blog');
-	$data['title'] 			= 'Gallery';
-	$data['section'] 		= 'blog';
+	$data['title'] 			= 'dashboard';
+	$data['section'] 		= 'dashboard';
 	$data['template-class']  = '';
 	$data['icon']			= 'fa-dashboard';
 } else {
