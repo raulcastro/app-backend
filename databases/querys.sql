@@ -42,3 +42,4 @@ INSERT INTO `users` (`FirstName`, `LastName`, `email`, `password`,   `type_user`
 VALUES
 ('Cynthia', 'Gonzalez', 'cynthia@crc-software.com', '$2y$10$qjyE5x/ryTja7pdZnImCs.bxEzt5wBr07eBLRVfX80lDTTLak9PjW', 1, NOW(),  NOW());
 
+INSERT INTO app_info(title) VALUES("app-bike");
