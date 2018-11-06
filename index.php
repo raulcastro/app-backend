@@ -22,7 +22,7 @@ if (isset($_SESSION["id_user"]))
 {
 	require_once $root.'/backends/admin-backend.php';
 	
-	$data 					= $backend->loadBackend('blog');
+	$data 				= $backend->loadBackend('blog');
 	$data['title'] 			= 'Gallery';
 	$data['section'] 		= 'blog';
 	$data['template-class']  = '';
